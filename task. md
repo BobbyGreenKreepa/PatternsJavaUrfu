@@ -1,2 +1,3 @@
 Задание 1. Инициация проекта
 Задание 2. Создание Singlton объекта, в проекте находится в package com.example.javapatternsproject.common.ui.theme.themeholder;
+Задание 3. Создание Prototype в package com.example.javapatternsproject.common.usecase.pattern;
