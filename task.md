@@ -13,3 +13,6 @@
 # Задание 7.
 Создание Adapter в com.example.javapatternsproject.common.sdk.vibration,
 SystemVibrator, VibrationManager, VibratorAdapter
+# Задание 8.
+Создание Abstract Factory в com.example.javapatternsproject.common.sdk.notification,
+AndroidNotificationFactory, NotificationFactory, NotificationImpl
