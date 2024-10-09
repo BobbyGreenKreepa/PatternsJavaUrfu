@@ -9,4 +9,7 @@
 # Задание 5.
 Создание Builder в com.example.javapatternsproject.common.ui.theme.themeholder;
 # Задание 6.
-Создание Builder в com.example.javapatternsproject.common.sdk.intent
+Создание Factory в com.example.javapatternsproject.common.sdk.intent
+# Задание 7.
+Создание Adapter в com.example.javapatternsproject.common.sdk.vibration,
+SystemVibrator, VibrationManager, VibratorAdapter
