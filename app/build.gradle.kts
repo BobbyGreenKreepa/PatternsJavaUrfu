@@ -67,6 +67,14 @@ dependencies {
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("androidx.compose.runtime:runtime-livedata:1.7.1")
 
+
+    // Основная библиотека DataStore для работы с Preferences
+    implementation("androidx.datastore:datastore-preferences:1.1.0-alpha04")
+
+    // RxJava3 интеграция (если используется)
+    implementation("androidx.datastore:datastore-preferences-rxjava3:1.1.0-alpha04")
+
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.5")
     implementation("androidx.activity:activity-compose:1.9.2")

@@ -16,3 +16,6 @@ SystemVibrator, VibrationManager, VibratorAdapter
 # Задание 8.
 Создание Abstract Factory в com.example.javapatternsproject.common.sdk.notification,
 AndroidNotificationFactory, NotificationFactory, NotificationImpl
+# Задание 9.
+Создание Bridge в com.example.javapatternsproject.common.storage,
+DataSaver, DataStorage, DebugDataStorage, DataStoreSaver, SharedPreferencesSaver
