@@ -22,4 +22,9 @@ DataSaver, DataStorage, DebugDataStorage, DataStoreSaver, SharedPreferencesSaver
 # Задание 10.
 Создание Composite в com.examople.javapatternsproject.common.usecase.pattern.Content,
 com.examople.javapatternsproject.common.usecase.pattern.Paragraph
+# Задание 11.
+Создание Decorator в com.example.javapatternsproject.common.sdk.resources.SystemResourcesProvider,
+com.example.javapatternsproject.common.sdk.resources.ResourcesProvider
+com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourceProviderDecorator
+
 
