@@ -2,7 +2,25 @@ package com.example.javapatternsproject.common.usecase.pattern;
 
 import androidx.annotation.NonNull;
 
-public record Paragraph(String header, String content, String moreLink) {
+import java.util.Collections;
+import java.util.List;
+
+public class Paragraph extends Content {
+
+    String header;
+
+    String moreLink;
+
+    String content;
+
+    List<Content> inners;
+
+    Paragraph (String header, String content, String moreLink) {
+        this.content = content;
+        this.header = header;
+        this.moreLink = moreLink;
+    }
+
 
     /**
      * Задание 4 Prototype.
@@ -35,5 +53,15 @@ public record Paragraph(String header, String content, String moreLink) {
                 ", content='" + content + '\'' +
                 ", moreLink='" + moreLink + '\'' +
                 '}';
+    }
+
+    @Override
+    String getText() {
+        return content;
+    }
+
+    @Override
+    List<Content> getInners() {
+        return inners;
     }
 }

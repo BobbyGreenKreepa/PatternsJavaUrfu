@@ -19,3 +19,7 @@ AndroidNotificationFactory, NotificationFactory, NotificationImpl
 # Задание 9.
 Создание Bridge в com.example.javapatternsproject.common.storage,
 DataSaver, DataStorage, DebugDataStorage, DataStoreSaver, SharedPreferencesSaver
+# Задание 10.
+Создание Composite в com.examople.javapatternsproject.common.usecase.pattern.Content,
+com.examople.javapatternsproject.common.usecase.pattern.Paragraph
+
