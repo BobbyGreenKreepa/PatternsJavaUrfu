@@ -34,4 +34,8 @@ com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourcePro
 ### Признаки паттерна
 Класс [`RequestFacadeImpl`](./src/main/java/com/example/javapatternsproject/common/request/RequestFacadeImpl.java) польностью удовлетворяет своей структурой паттерну фасад
 он явно зависит от 3 классов, и содержит в себе метод, который хранит логику использования этих 3 зависимостей, тем самым снимая эту отвественность с клиента.
+## Задание 13.
+Создание Facade в [`TextPresentationFactory`](./src/main/java/com/example/javapatternsproject/common/ui/text/textpresent/TextPresentationFactory.java)
+### Причина выбор
+Паттерн Flyweight здесь идеально подходит для того что бы переиспользовать строки, но нельзя переиспользваться Spannable строки, по этому они буду создавать каждый раз новые
 
