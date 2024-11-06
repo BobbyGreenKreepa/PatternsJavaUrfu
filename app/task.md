@@ -38,3 +38,10 @@ com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourcePro
 Создание Facade в [`TextPresentationFactory`](./src/main/java/com/example/javapatternsproject/common/ui/text/textpresent/TextPresentationFactory.java)
 ### Причина выбор
 Паттерн Flyweight здесь идеально подходит для того что бы переиспользовать строки, но нельзя переиспользваться Spannable строки, по этому они буду создавать каждый раз новые
+## Задание 14
+Создание Прокси в [`ExpandAnimation`](./src/main/java/com/example/javapatternsproject/common/ui/animation/ExpandAnimation.kt)
+### Причина выбор
+ некоторых сулчаях будет правильней не показывать Анимированные изменения UI, а показывать упрощенный вид с измнением состоянияя в 1 кадр
+### Признаки паттерна
+Классы реализуют один интерфейс ExpandAnimation и имеют тяжелую RealExpandAnimation и легкую реализацию ExpandAnimationProxy, и в некоторых случаях 
+прокси-класс может вызывать методы проксируемого
