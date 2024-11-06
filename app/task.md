@@ -39,7 +39,7 @@ com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourcePro
 ### Причина выбор
 Паттерн Flyweight здесь идеально подходит для того что бы переиспользовать строки, но нельзя переиспользваться Spannable строки, по этому они буду создавать каждый раз новые
 ## Задание 14
-Создание Прокси в [`ExpandAnimation`](./src/main/java/com/example/javapatternsproject/common/ui/animation/ExpandAnimation.kt)
+Создание Прокси в [`ExpandAnimation`](./src/main/java/com/example/javapatternsproject/common/ui/animation/Expand.java)
 ### Причина выбор
  некоторых сулчаях будет правильней не показывать Анимированные изменения UI, а показывать упрощенный вид с измнением состоянияя в 1 кадр
 ### Признаки паттерна
