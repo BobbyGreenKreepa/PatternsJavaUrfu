@@ -4,7 +4,7 @@ import android.graphics.Typeface;
 
 import org.w3c.dom.Text;
 
-abstract public class TextPresent {
+public class TextPresent {
 
     private final Typeface typeface;
 

@@ -2,11 +2,6 @@ package com.example.javapatternsproject.common.ui.text.textpresent;
 
 import android.graphics.Typeface;
 import android.text.Spannable;
-
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,11 +17,13 @@ public class TextPresentationFactory {
             return new SpannableTextPresent(typeface, value, type, spans);
         }
 
-        if (presets.get(Triple(value, typeface, type)) != null) {
-            return presets.get(Triple(value, typeface, type)
+        Triple<String, Typeface, PresentType> triple = new Triple<>(value, typeface, type);
+
+        if (presets.get(triple) != null) {
+            return presets.get(triple);
         }
 
-        presets.put(Triple(value, typeface, type), TextPresent(value, typeface, type));
-        return presets.get(Triple(value, typeface, type));
+        presets.put(triple, new TextPresent(typeface, value, type));
+        return presets.get(triple);
     }
 }

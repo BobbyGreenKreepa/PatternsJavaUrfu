@@ -38,4 +38,3 @@ com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourcePro
 Создание Facade в [`TextPresentationFactory`](./src/main/java/com/example/javapatternsproject/common/ui/text/textpresent/TextPresentationFactory.java)
 ### Причина выбор
 Паттерн Flyweight здесь идеально подходит для того что бы переиспользовать строки, но нельзя переиспользваться Spannable строки, по этому они буду создавать каждый раз новые
-
