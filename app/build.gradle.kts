@@ -94,4 +94,3 @@ dependencies {
     implementation(localGroovy())
 }
 
-tasks.register("intepreter", InterpreterTask)

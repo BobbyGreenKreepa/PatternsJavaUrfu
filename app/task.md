@@ -55,7 +55,7 @@ com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourcePro
 Интерфейс команды - интерфейс с одним методом execute
 Есть класс который отвечает за выполнение команд
 Команды имеют внутри себя не обобщенное состояние и логику
-## Задание 16
+## Задание 17
 Создание Interpreter в [`build`](./src/main/java/build)
 ### Причина выбора
 Паттерн Interpreter позволяет объединять выполнение gradle команды без того что бы заводить под 
@@ -64,4 +64,13 @@ com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourcePro
 ### Признаки паттерна
 Есть класс Interpreter - который интерпритирует формальный язык
 Есть формальный язык - набор команд GradleCommand
+## Задание 18
+Создание Iterator в [`ContentIterator`](./src/main/java/com/example/javapatternsproject/common/usecase/pattern/ContentIterator.java)
+### Причина выбора
+Паттерн Iterator позволяет удобно итерировать по сложной структуре данных в нужном мне порядке 
+по списку графов
+### Признаки паттерна
+Есть класс ContentIterator, который реализует интерфейс Iterator, в котором есть метды hasNext и next, которые
+являются признаками паттерна
+
 
