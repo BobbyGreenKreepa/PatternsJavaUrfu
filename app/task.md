@@ -81,6 +81,14 @@ com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourcePro
 Snapshot - класс который хранит состояние
 Snapshot создается из экземпляра класса
 restoreFromSnapshot - метод который позволяет восстановить искомый объект по его Snapshot
+## Задание 21
+Создание Observer в [`EventBus`](./src/main/java/com/example/javapatternsproject/common/eventbus/EventBus.java)
+### Причина выбора
+EventBus - хоть и не рекомендованный подход в разработке, но кого это кого-то останавливало.
+EventBus подразумевает использование паттера Observer
+### Признаки паттерна
+EventBus - класс, который регистрирует конкретно типизированного слушателя
+EventListener - интерфейс, который позволяет слушать изменения.
 
 
 
