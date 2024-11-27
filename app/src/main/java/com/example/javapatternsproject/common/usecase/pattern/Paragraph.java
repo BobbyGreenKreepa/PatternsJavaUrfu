@@ -30,17 +30,14 @@ public class Paragraph extends Content {
         return new Paragraph(header, content, moreLink);
     }
 
-    // Проверка на пустой заголовок
     public boolean isNoHeader() {
         return header == null || header.isEmpty();
     }
 
-    // Проверка на пустое содержимое
     public boolean isNoContent() {
         return content == null || content.isEmpty();
     }
 
-    // Проверка на пустую ссылку "moreLink"
     public boolean isNoMoreLink() {
         return moreLink == null || moreLink.isEmpty();
     }
@@ -53,6 +50,24 @@ public class Paragraph extends Content {
                 ", content='" + content + '\'' +
                 ", moreLink='" + moreLink + '\'' +
                 '}';
+    }
+
+    public static Paragraph fromString(String serialized) {
+        if (serialized == null || serialized.isEmpty()) {
+            throw new IllegalArgumentException("Input string cannot be null or empty");
+        }
+
+        String[] parts = serialized.split("\\|", -1);
+        if (parts.length < 3) {
+            throw new IllegalArgumentException("Input string must have at least three parts: header, content, and moreLink");
+        }
+
+        String header = parts[0];
+        String content = parts[1];
+        String moreLink = parts[2];
+
+        // Возвращаем новый объект
+        return new Paragraph(header, content, moreLink);
     }
 
     @Override

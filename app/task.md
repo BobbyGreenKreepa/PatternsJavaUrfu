@@ -72,5 +72,15 @@ com.example.javapatternsproject.common.sdk.resources.decorator.LoggerResourcePro
 ### Признаки паттерна
 Есть класс ContentIterator, который реализует интерфейс Iterator, в котором есть метды hasNext и next, которые
 являются признаками паттерна
+## Задание 20
+Создание Memento в [`PatternDescription`](./src/main/java/com/example/javapatternsproject/common/usecase/pattern/PatternDescription.java)
+### Причина выбора
+Позволяет удобно сохранять паттерны в локльное хранилище, логика сохранения рядом с основным классом,
+но при этом вынесена в отдельный класс
+### Признаки паттерна
+Snapshot - класс который хранит состояние
+Snapshot создается из экземпляра класса
+restoreFromSnapshot - метод который позволяет восстановить искомый объект по его Snapshot
+
 
 
