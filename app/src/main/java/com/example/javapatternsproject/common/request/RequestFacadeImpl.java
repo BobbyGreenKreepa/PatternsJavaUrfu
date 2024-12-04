@@ -14,32 +14,45 @@ import java.net.CacheRequest;
  */
 public class RequestFacadeImpl implements RequestFacade {
 
+    //Здаание 23 стратегия
+    private final OnErrorStrategy onErrorStrategy;
+
     private final Api api;
 
     private final Logger logger;
 
     public RequestFacadeImpl(
             Api api,
-            Logger logger
+            Logger logger,
+            OnErrorStrategy onErrorStrategy
     ) {
         this.api = api;
         this.logger = logger;
+        this.onErrorStrategy = onErrorStrategy;
     }
 
     @Override
     public Object getActualResponse(Request<Object> request) {
-        Object respFromCache = RequestCache.get().tryGet(request);
+        try {
+            Object respFromCache = RequestCache.get().tryGet(request);
 
-        if (respFromCache == null) {
-            Object resp = api.execute(request);
-            logger.log("Request to sever" + request.url());
-            RequestCache.get().set(request, resp);
-            logger.log("Enclosed to cache \n" + resp.toString());
-            return resp;
+            if (respFromCache == null) {
+                Object resp = api.execute(request);
+                logger.log("Request to sever" + request.url());
+                RequestCache.get().set(request, resp);
+                logger.log("Enclosed to cache \n" + resp.toString());
+                return resp;
+            }
+
+            logger.log("====FROM CACHE====" + request.url());
+            return respFromCache;
+        } catch (Throwable e) {
+            if (onErrorStrategy.shouldInterceptError(e)) {
+                return onErrorStrategy.getValue(e);
+            }
+
+            throw e;
         }
-
-        logger.log("====FROM CACHE====" + request.url());
-        return respFromCache;
     }
 
     public Api getApi() {
